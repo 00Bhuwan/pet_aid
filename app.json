@@ -1,3 +1,4 @@
+
 {
   "expo": {
     "name": "pet_aid",
@@ -13,8 +14,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#53B175"
       }
     },
     "web": {
@@ -28,11 +29,20 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "resizeMode": "cover",
+          "backgroundColor": "#33ffbd",
+          "enableFullScreenImage_legacy": true
         }
-      ]
+      ],
+      [
+      "expo-font",
+      {
+        "fonts": [
+          "./assets/fonts/GentyDemo-Regular.ttf",
+          "./assets/fonts/Gilroy-Medium.ttf"
+        ]
+      }
+    ]
     ],
     "experiments": {
       "typedRoutes": true
