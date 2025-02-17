@@ -24,6 +24,9 @@ module.exports = {
           200: "#666876",
           300: "#191D31",
         },
+        green: {
+          DEFAULT: '#3E612F'
+        },
         danger: "#F75555",
       },
     },

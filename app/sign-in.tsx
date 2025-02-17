@@ -3,6 +3,7 @@ import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import images from '@/constants/images';
 import icons from '@/constants/icons';
+import { Link } from 'expo-router';
 
 const SignIn = ( ) => {
     const handleLogin = () => {
@@ -38,11 +39,11 @@ const SignIn = ( ) => {
                 <TouchableOpacity 
                 onPress={handleLogin} 
                 className="bg-green-500 shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5">
-                    <View className="text-white text-2xl font-Gilroy text-center">
-                        <Text className='text-white text-2xl font-Gilroy text-center'>
-                            Log In
-                        </Text>
-                    </View> 
+                    <Link href={"/log-in"}>
+                            <Text className='text-white text-2xl font-Gilroy text-center'>
+                                Log In
+                            </Text>
+                    </Link>
                 </TouchableOpacity>
 
                 {/* SignIn button */}
