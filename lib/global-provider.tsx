@@ -51,7 +51,6 @@ export const useGlobalContext = (): GlobalContextType => {
 
     if(!context){
         throw new Error('useGlobalContext must be used within a GlobalProvider');
-
     }
     return context;
 };
