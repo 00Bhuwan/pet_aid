@@ -42,7 +42,8 @@ const LogIn = () => {
                     <TextInput
                         placeholder='Enter E-mail'
                         placeholderTextColor= '#b0b3b5'
-                        className='text-left font-Gilroy text-black-300 text-1xl py-1'/>
+                        className='text-left font-Gilroy text-black-300 text-1xl py-1'
+                        textContentType='emailAddress'/>
                 </View>
             </View>
 
@@ -73,6 +74,7 @@ const LogIn = () => {
             
 
             {/* Login button */}
+            <Link href={'/(root)/(tabs)/home'}>
             <TouchableOpacity 
             onPress={handleLogin} 
             className="bg-green-500 shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5">
@@ -82,6 +84,8 @@ const LogIn = () => {
                     </Text>
                 </View> 
             </TouchableOpacity>
+            </Link>
+
 
             <View className='px-10 mt-6'>
                 <Text className='font-Gilroy text-black-200 text-1xl text-center'>

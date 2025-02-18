@@ -11,8 +11,7 @@ import favourite from "@/assets/icons/favourite.png"
 import forget from "@/assets/icons/forget.png"
 import shop from "@/assets/icons/shop.png"
 import line from "@/assets/icons/line.png"
-
-
+import search from "@/assets/icons/search.png"
 
 export default{
     google,
@@ -27,5 +26,6 @@ export default{
     forget,
     favourite,
     shop,
-    line
+    line,
+    search,
 };
