@@ -5,8 +5,8 @@ import images from '@/constants/images';
 import icons from '@/constants/icons';
 import { Link } from 'expo-router';
 
-const LogIn = () => {
-    const handleLogin = () => {
+const SignUp = () => {
+    const handleSignUp = () => {
 
     };
   return (
@@ -21,17 +21,33 @@ const LogIn = () => {
             {/* Title */}
             <View className='px-10 mt-6'>
                 <Text className='text-left font-Gilroy text-black-300 text-3xl'>
-                    Log In
+                    Sign Up
                 </Text>
             </View>
             <View className='px-10 mt-1'>
                 <Text className='text-left font-Gilroy text-black-100 text-1xl'>
-                    Enter your email and password
+                    Enter your credentials to continue.
                 </Text>
             </View>
 
             <View className='px-10 mt-8'>
-                <Text className='text-left font-Gilroy text-black-100 text-1xl'>
+                <Text className='text-left font-Gilroy text-black-200 text-1xl'>
+                    Username
+                </Text>
+            </View>
+
+            {/* code for entering Username */}
+            <View className='px-10 mt-2'>
+                <View className='text-left font-Gilroy text-black-200 text-2xl'>
+                    <TextInput
+                        placeholder='Enter Username'
+                        placeholderTextColor= '#b0b3b5'
+                        className='text-left font-Gilroy text-black-300 text-1xl py-1'/>
+                </View>
+            </View>
+
+            <View className='px-10 mt-6'>
+                <Text className='text-left font-Gilroy text-black-200 text-1xl'>
                     E-mail
                 </Text>
             </View>
@@ -47,48 +63,54 @@ const LogIn = () => {
             </View>
 
             <View className='px-10 mt-6'>
-                <Text className='text-left font-Gilroy text-black-100 text-1xl'>
+                <Text className='text-left font-Gilroy text-black-200 text-1xl'>
                     Password
                 </Text>
             </View>
 
             {/* code for entering password */}
             <View className='px-10 mt-2'>
-                    <View className='text-left font-Gilroy text-black-200'>
+                <View className='text-left font-Gilroy text-black-200 text-2xl'>
+                    <View className='flex items-end'>
+                        <Image source={icons.forget} className='w-20 h-20 text-right' resizeMode='contain'/>
                     <TextInput
                         placeholder='Enter Password'
                         placeholderTextColor= '#b0b3b5'
                         className='text-left font-Gilroy text-black-300 text-1xl py-1'/>
                     </View>
+                </View>
             </View>
 
-            <TouchableOpacity 
-            onPress={handleLogin}>
-                <View className='px-10 mt-6'>
-                <Text className='text-right font-Gilroy text-blue-400 text-1xl'>
-                    Forget password?
-                </Text>
-                </View>
-            </TouchableOpacity>
             
 
-            {/* Login button */}
+            <View className='px-10 mt-6'>
+                <Text className='text-center font-Gilroy text-black-100 text-1xl'>
+                By continuing you agree to our {" "}
+                {/* <Link href=''> */}
+                <Text className='text-right font-Gilroy text-emerald-500 text-1xl'>
+                Terms of Service and Privacy Policy.
+                </Text>
+                </Text>
+                {/* </Link> */}
+            </View>
+
+            {/* SignUp button */}
             <TouchableOpacity 
-            onPress={handleLogin} 
+            onPress={handleSignUp} 
             className="bg-green-500 shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5">
                 <View className="text-white text-2xl font-Gilroy text-center">
                     <Text className='text-white text-2xl font-Gilroy text-center'>
-                        Log In
+                        Sign Up
                     </Text>
                 </View> 
             </TouchableOpacity>
 
             <View className='px-10 mt-6'>
-                <Text className='font-Gilroy text-black-200 text-1xl text-center'>
-                    Don't have an account? {" "}
-                <Link href={'/sign-up'}>
-                <Text className='font-Gilroy text-green-400 text-1xl'>
-                     Sign Up
+                <Text className='text-left font-Gilroy text-black-200 text-1xl'>
+                    Already have an account?{" "}
+                <Link href={'/log-in'}>
+                <Text className='text-left font-Gilroy text-green text-1xl'>
+                    Log In
                 </Text>
                 </Link>
                 </Text>
@@ -101,4 +123,4 @@ const LogIn = () => {
   )
 }
 
-export default LogIn
+export default SignUp
