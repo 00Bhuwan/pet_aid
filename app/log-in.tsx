@@ -74,17 +74,17 @@ const LogIn = () => {
             
 
             {/* Login button */}
-            <Link href={'/(root)/(tabs)/home'}>
             <TouchableOpacity 
             onPress={handleLogin} 
             className="bg-green-500 shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5">
                 <View className="text-white text-2xl font-Gilroy text-center">
+                <Link href={'/(root)/(tabs)/home'}>
                     <Text className='text-white text-2xl font-Gilroy text-center'>
                         Log In
                     </Text>
+                </Link>
                 </View> 
             </TouchableOpacity>
-            </Link>
 
 
             <View className='px-10 mt-6'>

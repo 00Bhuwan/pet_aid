@@ -9,6 +9,9 @@ const SignUp = () => {
     const handleSignUp = () => {
 
     };
+    const handleSwitch = () => {
+
+    };
   return (
     <SafeAreaView className='big-white h-full'>
         <ScrollView contentContainerClassName='h-full'>
@@ -37,12 +40,13 @@ const SignUp = () => {
             </View>
 
             {/* code for entering Username */}
-            <View className='px-10 mt-2'>
-                <View className='text-left font-Gilroy text-black-200 text-2xl'>
+            <View className='px-10 py-1 flex'>
+                <View className='text-left font-Gilroy text-black-200 text-1xl'>
                     <TextInput
                         placeholder='Enter Username'
                         placeholderTextColor= '#b0b3b5'
-                        className='text-left font-Gilroy text-black-300 text-1xl py-1'/>
+                        className='text-left font-Gilroy text-black-300 text-1.8xl mb-0 pb-0'/>
+                        <Image source={icons.line} className='w-full h-1 mt-1 pt-0'/>
                 </View>
             </View>
 
@@ -54,11 +58,12 @@ const SignUp = () => {
 
             {/* code for entering email */}
             <View className='px-10 mt-2'>
-            <View className='text-left font-Gilroy text-black-200'>
+            <View className='text-left font-Gilroy text-black-200 text-1xl'>
                     <TextInput
                         placeholder='Enter E-mail'
                         placeholderTextColor= '#b0b3b5'
-                        className='text-left font-Gilroy text-black-300 text-1xl py-1'/>
+                        className='text-left font-Gilroy text-black-300 text-1.8xl mb-0 pb-0'/>
+                        <Image source={icons.line} className='w-full h-1 mt-1 pt-0'/>
                 </View>
             </View>
 
@@ -70,18 +75,23 @@ const SignUp = () => {
 
             {/* code for entering password */}
             <View className='px-10 mt-2'>
-                <View className='text-left font-Gilroy text-black-200 text-2xl'>
-                    <View className='flex items-end'>
-                        <Image source={icons.forget} className='w-20 h-20 text-right' resizeMode='contain'/>
+            <View className='text-left items-center font-Gilroy w-full flex-row'>
+                <View className='flex-1'>
                     <TextInput
                         placeholder='Enter Password'
                         placeholderTextColor= '#b0b3b5'
-                        className='text-left font-Gilroy text-black-300 text-1xl py-1'/>
-                    </View>
+                        className='text-left font-Gilroy text-black-300 text-1.8xl mb-0 pb-0'/>
+                </View>
+                <View   >
+                        <TouchableOpacity 
+                        onPress={handleSwitch}
+                        className='text-center'>
+                            <Image source={icons.forget}/>
+                        </TouchableOpacity>
                 </View>
             </View>
-
-            
+                <Image source={icons.line} className='w-full h-1 mt-1 pt-0'/>
+            </View>
 
             <View className='px-10 mt-6'>
                 <Text className='text-center font-Gilroy text-black-100 text-1xl'>
@@ -97,7 +107,7 @@ const SignUp = () => {
             {/* SignUp button */}
             <TouchableOpacity 
             onPress={handleSignUp} 
-            className="bg-green-500 shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5">
+            className="bg-green-500 shadow-md shadow-zinc-300 rounded-full py-4 mt-5 mx-7">
                 <View className="text-white text-2xl font-Gilroy text-center">
                     <Text className='text-white text-2xl font-Gilroy text-center'>
                         Sign Up
@@ -106,17 +116,15 @@ const SignUp = () => {
             </TouchableOpacity>
 
             <View className='px-10 mt-6'>
-                <Text className='text-left font-Gilroy text-black-200 text-1xl'>
+                <Text className='text-center font-Gilroy text-black-200 text-1xl'>
                     Already have an account?{" "}
                 <Link href={'/log-in'}>
-                <Text className='text-left font-Gilroy text-green text-1xl'>
+                <Text className='font-Gilroy text-emerald-500 text-1xl'>
                     Log In
                 </Text>
                 </Link>
                 </Text>
             </View>
-
-
         </ScrollView>
     </SafeAreaView>
     
