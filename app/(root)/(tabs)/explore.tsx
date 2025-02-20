@@ -28,7 +28,7 @@ const Explore = () => {
           {categories.map((cat) => (
             <TouchableOpacity
               key={cat.key}
-              className="bg-gray-100 rounded-lg p-4 shadow-md"
+              className="bg-green-300 rounded-lg p-4 shadow-md"
               onPress={() => setSelectedCategory(cat.key)}
             >
               <Text className="text-center font-semibold">{cat.name}</Text>
@@ -37,7 +37,7 @@ const Explore = () => {
         </View>
       </ScrollView>
 
-      <Button title="Go to Cart" onPress={() => router.push("/Cart")} />
+      <Button title="Go to Cart" onPress={() => router.push("/cart")} />
 
       {/* Modal for Category Items */}
       <Modal visible={!!selectedCategory} animationType="slide" transparent={true}>
@@ -56,10 +56,10 @@ const Explore = () => {
                   <View className="flex-row items-center justify-between p-2 border-b">
                     <Image source={item.image} className="w-12 h-12 rounded" />
                     <Text className="flex-1 ml-4">{item.name}</Text>
-                    <Text>{item.price}</Text>
+                    <Text className="px-2">{item.price}</Text>
                     <TouchableOpacity
                       onPress={() => addToCart(item)}
-                      className="bg-blue-500 px-4 py-1 rounded"
+                      className="bg-emerald-500 px-4 py-1 rounded"
                     >
                       <Text className="text-white">Add</Text>
                     </TouchableOpacity>

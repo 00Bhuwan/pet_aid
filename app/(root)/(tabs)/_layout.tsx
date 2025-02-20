@@ -41,6 +41,10 @@ const TabsLayout = () => {
             borderTopColor: "#0061FF1A",
             borderTopWidth: 1,
             minHeight: 70,
+            left: 0,
+            right: 0,
+            bottom: 0,  // Ensure it’s positioned at the bottom
+            paddingBottom: 10, // Added bottom padding to ensure content isn't hidden
           },
         }}
       >

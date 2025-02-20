@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
+import { Alert } from "react-native";
 
 interface Product {
   id: string;
@@ -19,7 +20,16 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [cart, setCart] = useState<Product[]>([]);
 
   const addToCart = (item: Product) => {
-    setCart((prevCart) => [...prevCart, item]);
+    const existingItem = cart.find((cartItem) => cartItem.id === item.id);
+
+    if (existingItem) {
+      // If the item is already in the cart, show an alert
+      Alert.alert("Already in Cart", "This item is already in your cart.");
+    } else {
+      // If the item is not in the cart, add it
+      setCart((prevCart) => [...prevCart, item]);
+      Alert.alert("Success", "One item added to Cart");
+    }
   };
 
   const clearCart = () => {

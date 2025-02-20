@@ -12,7 +12,7 @@ const Cart = () => {
       <Text className="text-xl font-bold text-center mb-4">Cart</Text>
 
       {cart.length === 0 ? (
-        <Text className="text-center text-gray-500">Your cart is empty.</Text>
+        <Text className="text-center text-gray-500 font-GentyDemo-Regular">Your cart is empty.</Text>
       ) : (
         <>
           <FlatList
@@ -20,7 +20,11 @@ const Cart = () => {
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
               <View className="flex-row items-center justify-between p-2 border-b">
-                <Image source={item.image} className="w-12 h-12 rounded" />
+                <Image 
+                  source={item.image} 
+                  className="w-16 h-16 rounded" // Set a fixed size for images
+                  resizeMode="contain" 
+                />
                 <Text className="flex-1 ml-4">{item.name}</Text>
                 <Text>{item.price}</Text>
               </View>
@@ -30,7 +34,7 @@ const Cart = () => {
             onPress={clearCart}
             className="bg-red-500 p-3 mt-4 rounded"
           >
-            <Text className="text-white text-center font-bold">Clear Cart</Text>
+            <Text className="text-white text-center font-bold font-GentyDemo-Regular">Clear Cart</Text>
           </TouchableOpacity>
         </>
       )}
@@ -39,7 +43,7 @@ const Cart = () => {
         onPress={() => router.push("/explore")}
         className="bg-blue-500 p-3 mt-4 rounded"
       >
-        <Text className="text-white text-center font-bold">Go to Explore</Text>
+        <Text className="text-white text-center font-bold font-GentyDemo-Regular">Go to Explore</Text>
       </TouchableOpacity>
     </View>
   );

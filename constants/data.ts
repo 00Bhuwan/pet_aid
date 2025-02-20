@@ -46,3 +46,49 @@ const product = {
   ],
 };
 export default product;
+
+export const doctorsData = [
+  {
+    id: "1",
+    name: "Dr. Aman Singh",
+    degree: "MBBS, MD, DM",
+    specialties: "Sleep Medicine",
+    image:images.aman , 
+  },
+  {
+    id: "2",
+    name: "Dr.Ikku",
+    degree: "MD, MBBS, ABC",
+    specialties: "General Physician",
+    image:images.ikku,
+  },
+  {
+    id: "3",
+    name: "Dr. Chilley",
+    degree: "MBBS, FRCS",
+    specialties: "Cardiology",
+    image:images.chilley,
+  },
+  {
+    id: "4",
+    name: "Dr.Motey",
+    degree: "MD, PhD",
+    specialties: "Neurology",
+    image:images.motey,
+  },
+  {
+    id: "5",
+    name: "Dr. Specticals",
+    degree: "MBBS, MRCP",
+    specialties: "Pediatrics",
+    image:images.suraj,
+  },
+  {
+    id: "6",
+    name: "Dr. Haddi",
+    degree: "MD, FRACP",
+    specialties: "Gastroenterology",
+    image:images.avash,
+  },
+];
+

@@ -18,11 +18,24 @@ import saw_slicker_brush from "@/assets/images/saw_slicker_brush.png";
 import self_cleaner_brush from "@/assets/images/self_cleaner_brush.png";
 import vest1 from "@/assets/images/vest1.png";
 import bone from "@/assets/images/Benebone_Dental_Dog_Chew_Toy.png";
-
+import aman from "@/assets/images/aman.png";
+import motey from "@/assets/images/motey.jpg";
+import avash from "@/assets/images/avash.jpeg";
+import ikku from "@/assets/images/ikku.jpeg";
+import chilley from "@/assets/images/chilley.jpg";
+import suraj from "@/assets/images/suraj.jpeg";
+import petaid from "@/assets/images/petaid.png";
+import fav from "@/assets/images/fav.png";
 
 export default{
     greenlogo,
     whitelogo,
+    aman,
+    motey,
+    avash,
+    ikku,
+    chilley,
+    suraj,
     autofood1,
     autofood2,
     autofood3,
@@ -41,4 +54,6 @@ export default{
     self_cleaner_brush,
     vest1,
     bone,
+    petaid,
+    fav,
 };
