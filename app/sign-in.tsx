@@ -38,7 +38,7 @@ const SignIn = ( ) => {
                 {/* Login button */}
                 <TouchableOpacity 
                 onPress={handleLogin} 
-                className="bg-green-500 shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5">
+                className="bg-green-500 shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5 items-center">
                     <View className="text-white text-2xl font-Gilroy text-center">
                     <Link href={'/log-in'}>
                         <Text className='text-white text-2xl font-Gilroy text-center'>
@@ -51,7 +51,7 @@ const SignIn = ( ) => {
                 {/* SignIn button */}
                 <TouchableOpacity 
                 onPress={handleSignUp} 
-                className="bg-green-500 shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5">
+                className="bg-green-500 shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5 items-center">
                     <View className="text-white text-2xl font-Gilroy text-center">
                     <Link href={'/sign-up'}>
                         <Text className='text-white text-2xl font-Gilroy text-center'>

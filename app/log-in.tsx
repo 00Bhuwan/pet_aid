@@ -74,6 +74,7 @@ const LogIn = () => {
             
 
             {/* Login button */}
+            <View className='items-center text-center mx-6'>
             <TouchableOpacity 
             onPress={handleLogin} 
             className="bg-green-500 shadow-md shadow-zinc-300 rounded-full w-full py-4 mt-5">
@@ -85,6 +86,7 @@ const LogIn = () => {
                 </Link>
                 </View> 
             </TouchableOpacity>
+            </View>
 
 
             <View className='px-10 mt-6'>
